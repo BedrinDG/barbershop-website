@@ -1,0 +1,17 @@
+{
+  "name": "m6_myproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery-parallax.js": "^1.5.0",
+    "swiper": "^11.2.6"
+  }
+}
