@@ -20,71 +20,66 @@ $('#barbers').click(function () {
     $('.barber')[0].scrollIntoView({behavior: 'smooth'});
 });
 
-//swiper init
-// var swiper = new Swiper(".mySwiper", {
-//     effect: "coverflow",
-//     centeredSlides: true,
-//     loop: true,
-//     slidesPerView: 3,
-//     autoHeight: false,
-//     slidesOffsetBefore: 0,
-//     navigation: {
-//         nextEl: ".next",
-//         prevEl: ".prev",
-//     },
-//     coverflowEffect: {
-//         rotate: 0,
-//         stretch: 0,
-//         depth: 150,
-//         modifier: 2.5,
-//         slideShadows: false,
-//     },
-//     // autoplay: {
-//     //     delay: 3000,
-//     //     disableOnInteraction: false,
-//     // },
-//     pagination: {
-//         el: ".swiper-pagination",
-//         dynamicBullets: true,
-//         paginationType: "bullets",
-//         dynamicMainBullets: 0
-//     },
-// });
+$('.popup-close').on('click', function () {
+    $('.popup').css('display', 'none');
+})
+
+$('#get-discount').on('click', function () {
+    $('#discount').css('display', 'flex');
+})
+$('.item-service-name').each(function (index, element) {
+    $('#service').next().append(`<div data-value="${index}">${$(this).html()}</div>`);
+})
+
+$(".custom-select").click(function (event) {
+    event.stopPropagation();
+    $("#dropdown").toggle();
+});
+
+$(".options div").click(function () {
+    let text = $(this).text();
+    let value = $(this).data("value");
+
+    $("#selected").text(text);
+    $("#service").val(value);
+
+    $('#service').next().hide();
+});
+
+$(document).click(function () {
+    $("#dropdown").hide();
+});
 
 
-
-var mySwiper = new Swiper ('.swiper-container', {
-    speed: 400,
-    // spaceBetween: 100,
-    initialSlide: 0,
-    //truewrapper adoptsheight of active slide
+new Swiper('.mySwiper', {
     autoHeight: false,
-    // Optional parameters
     direction: 'horizontal',
-    loop: true,
-    // delay between transitions in ms
-    autoplay: 5000,
-    autoplayStopOnLast: false, // loop false also
-    // If we need pagination
-    pagination: '.swiper-pagination',
-    paginationType: "bullets",
-
-    // Navigation arrows
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-
-    // And if we need scrollbar
-    //scrollbar: '.swiper-scrollbar',
-    // "slide", "fade", "cube", "coverflow" or "flip"
     effect: 'slide',
-    // Distance between slides in px.
-    spaceBetween: 60,
-    //
-    slidesPerView: 2,
-    //
     centeredSlides: true,
-    //
-    slidesOffsetBefore: 0,
-    //
     grabCursor: true,
+    loop: true,
+    spaceBetween: -150,
+    slidesPerView: 2,
+    initialSlide: 1,
+    autoplayStopOnLast: false,
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+        paginationType: "bullets",
+        dynamicMainBullets: 0
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+    },
+    breakpoints: {
+        1016: {
+            spaceBetween: -38,
+            slidesPerView: 2,
+        }
+    }
 })

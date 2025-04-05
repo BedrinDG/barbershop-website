@@ -620,7 +620,7 @@ body {
       gap: 59px;
 
       .barber-title {
-        font-size: 32px;
+        font-size: @barber-title-text-size;
         font-family: Lora, sans-serif;
         color: rgb(255, 255, 255);
         line-height: 1.2;
@@ -628,7 +628,7 @@ body {
       }
 
       .barber-description {
-        font-size: 18px;
+        font-size: @barber-description-text-size;
         font-family: Muller, sans-serif;
         color: rgb(255, 255, 255);
         line-height: 1.389;
@@ -640,12 +640,15 @@ body {
     .swiper {
       position: relative;
       padding-bottom: 40px;
+      max-width: 1004px;
 
       .swiper-wrapper {
+        //left: 222px;
+        left: 22%;
+        align-items: center;
+
         .barber-item {
           position: relative;
-          max-width: 460px;
-          height: 477px;
 
           img {
             filter: grayscale(100%);
@@ -655,7 +658,7 @@ body {
           .item-bottom-elements {
             background-color: rgba(0, 0, 0, 0.65);
             position: absolute;
-            bottom: 72px;
+            bottom: 7px;
             height: 33.3%;
             width: 100%;
             display: flex;
@@ -666,7 +669,7 @@ body {
             gap: 30px;
 
             .bottom-element-title {
-              font-size: 25px;
+              font-size: @barber-element-title-text-size;
               font-family: Lora, sans-serif;
               color: rgb(255, 255, 255);
               line-height: 0.84;
@@ -694,9 +697,18 @@ body {
         bottom: 8px;
       }
     }
-
-
   }
+}
+
+.swiper-slide-active {
+  max-width: 460px;
+  height: auto;
+  z-index: 20;
+  //position: relative;
+}
+
+.swiper-slide-next, .swiper-slide-prev {
+  max-width: 330px;
 }
 
 .swiper-slide {
@@ -705,6 +717,7 @@ body {
 
 .swiper-pagination {
   z-index: -1;
+  bottom: 15px !important;
 }
 
 .swiper-pagination-bullet {
@@ -787,6 +800,7 @@ body {
       display: flex;
       align-items: center;
       flex-direction: column;
+
       .logo {
         .logo();
         margin-bottom: 69px;
@@ -797,6 +811,7 @@ body {
         flex-direction: column;
         gap: 40px;
         align-items: center;
+
         .description-working-hours {
           width: 147px;
           .description-text-style()
@@ -812,13 +827,21 @@ body {
           display: flex;
           flex-direction: column;
           gap: 20px;
+
           .social-text {
             .description-text-style()
           }
+
           .social-icons {
             display: flex;
             gap: 25px;
             justify-content: center;
+
+            svg {
+              &:hover {
+                opacity: 0.9;
+              }
+            }
           }
         }
       }
@@ -829,6 +852,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .description-mail {
           width: 199px;
           .description-text-style();
@@ -849,7 +873,7 @@ body {
     .information-map {
       max-width: 862px;
       flex-grow: 1;
-      //flex-shrink: 0;
+
       div {
         iframe {
           width: 100% !important;
@@ -870,13 +894,16 @@ body {
 .footer {
   background-color: rgb(19, 19, 24);
   padding: 40px 0 61px 0;
+
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .rights {
       .footer-style-text()
     }
+
     .designer {
       .footer-style-text()
     }
@@ -887,22 +914,137 @@ body {
   background-color: rgba(19, 19, 24, 0.7);
 }
 
-//
-.swiper-container {
-  width: 800px;
-  height: 200px;
-
+.input-text-style() {
+  font-size: 16px;
+  font-family: Muller, sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
 }
 
-.swiper-slide {
-  background-color: purple;
+.popup {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
 
-}
+  .popup-content {
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-image: url('../images/social-bg.png');
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 79px;
+    width: 1004px;
+    height: 484px;
 
-.blue {
-  background-color: blue;
-}
+    .logo {
+      .logo();
+    }
 
-.red {
-  background-color: red;
+    .popup-text {
+      font-size: 18px;
+      font-family: Muller, sans-serif;
+      color: rgb(255, 255, 255);
+      line-height: 1.389;
+      text-align: center;
+      max-width: 360px;
+    }
+
+    .popup-close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      cursor: pointer;
+    }
+
+    .popup-title {
+      width: 293px;
+      font-size: 25px;
+      font-family: Lora, sans-serif;
+      color: rgb(255, 255, 255);
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .popup-form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      max-width: 804px;
+      gap: 40px 67px;
+
+      .form-group-input {
+        position: relative;
+
+        .form-input {
+          border: 1px solid;
+          width: 223px;
+          padding: 15px;
+          background: transparent;
+          appearance: none;
+          cursor: pointer;
+          .input-text-style();
+
+          &::placeholder {
+            .input-text-style();
+          }
+
+          .selected-option {
+
+          }
+
+          .hide-input {
+
+          }
+
+          .options {
+
+          }
+
+        }
+
+        svg {
+          position: absolute;
+          rotate: 90deg;
+          right: 15px;
+          top: 16px;
+        }
+
+        .not_error {
+          border-color: rgb(174, 137, 89);
+        }
+
+        .error {
+          border-color: red;
+        }
+
+        .input_error {
+          display: none;
+          color: white;
+          position: absolute;
+          width: 282px;
+        }
+      }
+
+      .form-action {
+        .active();
+      }
+    }
+  }
 }

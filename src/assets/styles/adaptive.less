@@ -555,15 +555,24 @@
     .barber-text {
 
       .barber-title {
+        @media screen and (max-width: 750px) {
+          font-size: @barber-title-text-size * 0.75;
+        }
       }
 
       .barber-description {
+        @media screen and (max-width: 750px) {
+          font-size: @barber-description-text-size * 0.75;
+        }
       }
     }
 
     .swiper {
 
       .swiper-wrapper {
+        @media screen and (max-width: 1016px) {
+          //left: 50;
+        }
         .barber-item {
 
           img {
@@ -572,6 +581,9 @@
           .item-bottom-elements {
 
             .bottom-element-title {
+              @media screen and (max-width: 853px) {
+                font-size: @barber-element-title-text-size * 0.75;
+              }
             }
 
             .bottom-element-action {
@@ -664,6 +676,7 @@
     @media screen and (max-width: 700px) {
       flex-direction: column;
     }
+
     .information-text {
       .logo {
       }
@@ -687,8 +700,11 @@
       .information-text-contact {
         .description-mail {
           .description-text-style();
+
           span {
-            font-size: @information-text-size * 0.75;
+            @media screen and (max-width: 853px) {
+              font-size: @information-text-size * 0.75;
+            }
           }
         }
 
@@ -725,8 +741,54 @@
     .rights {
       .footer-style-text()
     }
+
     .designer {
       .footer-style-text()
+    }
+  }
+}
+
+.popup {
+
+  .popup-content {
+    @media screen and (max-width: 533px) {
+      height: 100%;
+    }
+    .logo {
+    }
+
+    .popup-text {
+    }
+
+    .popup-close {
+    }
+
+    .popup-title {
+      @media screen and (max-width: 533px) {
+        display: none;
+      }
+    }
+
+    .popup-form {
+      .form-group-input {
+
+        .form-input {
+
+          &::placeholder {
+          }
+        }
+
+        .not_error {
+        }
+
+        .error {
+        }
+
+        .input_error {
+        }
+      }
+      .form-action {
+      }
     }
   }
 }
