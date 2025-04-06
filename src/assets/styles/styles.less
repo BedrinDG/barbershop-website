@@ -970,7 +970,7 @@ body {
       cursor: pointer;
     }
 
-    .popup-title {
+    .popup-title, .popup-title-success {
       width: 293px;
       font-size: 25px;
       font-family: Lora, sans-serif;
@@ -999,6 +999,7 @@ body {
           background: transparent;
           appearance: none;
           cursor: pointer;
+          outline: none;
           .input-text-style();
 
           &::placeholder {
@@ -1014,7 +1015,24 @@ body {
           }
 
           .options {
-
+            display: none;
+            background-color: black;
+            width: 223px;
+            border: 1px solid rgb(174, 137, 89);
+            position: absolute;
+            z-index: 23;
+            top: 55px;
+            left: 0;
+            height: 130px;
+            overflow: auto;
+            padding: 15px;
+            div {
+              margin-bottom: 10px;
+              border-bottom: 1px solid white;
+              span {
+                font-family: Arial, sans-serif;
+              }
+            }
           }
 
         }

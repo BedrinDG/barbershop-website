@@ -70,7 +70,7 @@
             <div class="main-info">
                 <h2 class="info-title">Создайте деловой имидж, который достоин Вас!</h2>
                 <p class="info-description">Мужские стрижки и бритье в центре Москвы</p>
-                <button class="main-action button ">Записаться онлайн</button>
+                <button class="main-action button form-open">Записаться онлайн</button>
             </div>
             <div class="main-image">
                 <img src="src/assets/images/main-image.png" alt="Барбер">
@@ -320,7 +320,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Алексей</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -329,7 +329,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Марат</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -338,7 +338,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Екатерина</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -347,7 +347,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Владимир</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -356,7 +356,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Даниил</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -365,7 +365,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Артур</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -374,7 +374,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Маргарита</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -383,7 +383,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Александр</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -392,7 +392,7 @@
                     <div class="item-bottom-elements">
                         <div class="bottom-element-title">Наталья</div>
                         <div class="bottom-element-action">
-                            <button class="button ">Записаться</button>
+                            <button class="button form-open">Записаться</button>
                         </div>
                     </div>
                 </div>
@@ -518,7 +518,7 @@
     </div>
 </div>
 
-<div class="popup" id="order" style="display: flex">
+<div class="popup" id="order">
     <div class="popup-content">
         <div class="popup-title">Заполните данные <br> для оформления заявки</div>
         <form class="popup-form">
@@ -527,25 +527,21 @@
                 <div class="input_error">Необходимо ввести ваше имя</div>
             </div>
             <div class="form-group-input">
-                <div class="form-input custom-select not_error" onclick="toggleDropdown()">
-                    <div class="selected-option">Выберите услугу</div>
+                <div class="form-input custom-select not_error">
+                    <div class="selected-option" id="test">Выберите услугу</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                         id="Capa_1" x="0px" y="0px" width="20px" height="20px" fill="#ae8959" viewBox="0 0 512.002 512.002"
+                         style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105    L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795    l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"/>
+                    </g>
+                </g>
+                </svg>
                     <input class="hide-input" type="hidden" name="service" id="service" >
                     <div class="options" id="dropdown">
                     </div>
                 </div>
-
-                <!--                <select class="form-input not_error" id="service">-->
-<!--                    <option value="" hidden="">Выберете услугу</option>-->
-<!--                </select>-->
-<!--                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"-->
-<!--                     id="Capa_1" x="0px" y="0px" width="20px" height="20px" fill="#ae8959" viewBox="0 0 512.002 512.002"-->
-<!--                     style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">-->
-<!--                    <g>-->
-<!--                        <g>-->
-<!--                            <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105    L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795    l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"/>-->
-<!--                        </g>-->
-<!--                    </g>-->
-<!--                </svg>-->
                 <div class="input_error">Необходимо выбрать услугу</div>
             </div>
             <div class="form-group-input">
@@ -557,37 +553,62 @@
                 <div class="input_error">Необходимо ввести номер телефона</div>
             </div>
             <div class="form-group-input">
-                <select class="form-input not_error" id="barber">
-                    <option value="" hidden>Выберете мастера</option>
-                </select>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                     id="Capa_1" x="0px" y="0px" width="20px" height="20px" fill="#ae8959" viewBox="0 0 512.002 512.002"
-                     style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+                <div class="form-input custom-select not_error">
+                    <div class="selected-option">Выберете мастера</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                         id="Capa_1" x="0px" y="0px" width="20px" height="20px" fill="#ae8959" viewBox="0 0 512.002 512.002"
+                         style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
                 <g>
                     <g>
                         <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105    L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795    l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"/>
                     </g>
                 </g>
                 </svg>
+                    <input class="hide-input" type="hidden" name="service" id="barber">
+                    <div class="options">
+                    </div>
+                </div>
                 <div class="input_error">Необходимо выбрать мастера</div>
             </div>
             <div class="form-group-input">
-                <select class="form-input not_error" id="time">
-                    <option value="" hidden>Выберете время</option>
-                </select>
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                     id="Capa_1" x="0px" y="0px" width="20px" height="20px" fill="#ae8959" viewBox="0 0 512.002 512.002"
-                     style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+                <div class="form-input custom-select not_error">
+                    <div class="selected-option">Выберете время</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                         id="Capa_1" x="0px" y="0px" width="20px" height="20px" fill="#ae8959" viewBox="0 0 512.002 512.002"
+                         style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
                 <g>
                     <g>
                         <path d="M388.425,241.951L151.609,5.79c-7.759-7.733-20.321-7.72-28.067,0.04c-7.74,7.759-7.72,20.328,0.04,28.067l222.72,222.105    L123.574,478.106c-7.759,7.74-7.779,20.301-0.04,28.061c3.883,3.89,8.97,5.835,14.057,5.835c5.074,0,10.141-1.932,14.017-5.795    l236.817-236.155c3.737-3.718,5.834-8.778,5.834-14.05S392.156,245.676,388.425,241.951z"/>
                     </g>
                 </g>
                 </svg>
+                    <input class="hide-input" type="hidden" name="service" id="time">
+                    <div class="options">
+                    </div>
+                </div>
                 <div class="input_error">Необходимо выбрать время</div>
             </div>
-            <button class="form-action button" id="submit">Оформить заявку</button>
+            <button class="form-action button" type="button" id="submit">Оформить заявку</button>
         </form>
+        <div class="popup-close">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0,0,256,256">
+                <g fill="#ae8959" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                   stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                   font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                   style="mix-blend-mode: normal">
+                    <g transform="scale(5.12,5.12)">
+                        <path d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="success">
+    <div class="popup-content">
+        <div class="popup-title-success">Спасибо что выбрали Strong Club!</div>
+        <div class="popup-text">Наш администратор свяжется с вами в течении 10 минут, для уточнения деталей.</div>
         <div class="popup-close">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="18" height="18" viewBox="0,0,256,256">
                 <g fill="#ae8959" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
