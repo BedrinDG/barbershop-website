@@ -4,38 +4,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //font-size: 0;
 }
 
 @font-face {
   font-family: Muller;
-  src: url("../fonts/Muller-Trial-Regular.ttf");
+  src: url("../../../dist/fonts/Muller-Trial-Regular.ttf");
 }
 
 @font-face {
   font-family: Muller;
-  src: url("../fonts/Muller-Trial-Bold.ttf");
+  src: url("../../../dist/fonts/Muller-Trial-Bold.ttf");
   font-weight: bold;
 }
 
 @font-face {
   font-family: Lora;
-  src: url("../fonts/Lora-Regular.ttf");
+  src: url("../../../dist/fonts/Lora-Regular.ttf");
 }
 
 @font-face {
   font-family: Lora;
-  src: url("../fonts/Lora-Bold.ttf");
+  src: url("../../../dist/fonts/Lora-Bold.ttf");
   font-weight: bold;
 }
 
 @font-face {
   font-family: Castellar;
-  src: url("../fonts/castellar-regular.ttf");
+  src: url("../../../dist/fonts/castellar-regular.ttf");
 }
 
 body {
-  background-image: url("../images/bg-image.png");
+  background-image: url("../../../dist/images/bg-image.png");
   background-position: center;
   background-size: cover;
   font-family: Muller, sans-serif;
@@ -577,7 +576,7 @@ body {
 }
 
 .discount {
-  background-image: url('../images/discount-bg.png');
+  background-image: url('../../../dist/images/discount-bg.png');
   background-position: center;
   background-size: cover;
 
@@ -937,7 +936,7 @@ body {
   .popup-content {
     padding: 0 10px;
     background-color: rgba(0, 0, 0, 0.85);
-    background-image: url('../images/social-bg.png');
+    background-image: url('../../../dist/images/social-bg.png');
     background-blend-mode: multiply;
     background-position: center;
     background-size: cover;
@@ -1006,13 +1005,6 @@ body {
             .input-text-style();
           }
 
-          .selected-option {
-
-          }
-
-          .hide-input {
-
-          }
 
           .options {
             display: none;
@@ -1066,3 +1058,5 @@ body {
     }
   }
 }
+
+@import "adaptive";
