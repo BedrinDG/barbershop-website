@@ -6,6 +6,8 @@ const path = require('path');
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const concatCss = require('gulp-concat-css');
+const minify = require('gulp-minify');
+const clean = require('gulp-clean');
 
 exports.less = function () {
     return gulp.src('./src/assets/styles/styles.less')
@@ -18,6 +20,13 @@ exports.less = function () {
         .pipe(gulp.dest('./dist/styles'));
 }
 
+gulp.task('minify-js', function () {
+    return gulp.src(['src/assets/scripts/script.js'])
+        .pipe(minify())
+        .pipe(gulp.dest('dist/scripts'))
+})
+
 exports.watch = function () {
-    gulp.watch('./src/assets/styles/*.less', gulp.series('less'));
+    gulp.watch('src/assets', gulp.series('less', 'minify-js'));
 };
+

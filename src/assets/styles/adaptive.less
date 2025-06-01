@@ -2,8 +2,11 @@
 
 .header {
   .container {
+    @media screen and (max-width: 1198px) {
+      padding: 59px 15px 0 15px;
+    }
     @media screen and (max-width: 425px) {
-      padding: 39px 15px 0 15px;
+      padding-top: 39px;
     }
 
     .logo {
@@ -103,6 +106,9 @@
 }
 
 .main {
+  @media screen and (max-width: 628px) {
+    margin-top: 40px;
+  }
   .container {
     @media screen and (max-width: 1087px) {
       padding-left: 30px;
@@ -238,6 +244,9 @@
     }
 
     .about-title {
+      @media screen and (max-width: 872px) {
+        margin-left: 0;
+      }
       @media screen and (max-width: 853px) {
         margin-bottom: 30px;
       }
@@ -542,9 +551,33 @@
 
 .barber {
   .container {
-    @media screen and (max-width: 857px) {
-      padding: 0 20px;
-    }
+    //@media screen and (max-width: 857px) {
+    //  padding: 0 20px;
+    //}
+    //@media screen and (max-width: 768px) {
+    //  padding: 50px 15px;
+    //
+    //  .barbers-list {
+    //    width: 100%;
+    //
+    //    .swiper-wrapper {
+    //      .barber-item {
+    //        width: 100% !important;
+    //        left: 0 !important;
+    //
+    //        img {
+    //          width: 100%;
+    //          height: auto;
+    //        }
+    //      }
+    //
+    //      .swiper-slide-active {
+    //        width: 100% !important;
+    //        left: 0 !important;
+    //      }
+    //    }
+    //  }
+    //}
 
     .barber-text {
 
@@ -561,10 +594,18 @@
       }
     }
 
-    .swiper {
+    .barbers-list {
 
       .swiper-wrapper {
+        @media screen and (max-width: 1032px) {
+          width: 600px !important;
+        }
+        @media screen and (max-width: 644px) {
+          width: 300px !important;
+        }
+
         .barber-item {
+          visibility: visible;
 
           .item-bottom-elements {
 
@@ -576,6 +617,38 @@
 
           }
         }
+
+        .swiper-slide-active {
+          @media screen and (max-width: 1032px) {
+            width: 100% !important;
+            left: 0;
+          }
+        }
+
+        .swiper-slide-next, .swiper-slide-prev {
+          @media screen and (max-width: 1032px) {
+            width: 100% !important;
+            left: 0;
+          }
+        }
+      }
+
+      .swiper-pagination {
+        .swiper-pagination-bullet-active-next, .swiper-pagination-bullet-active-prev {
+          @media screen and (max-width: 1032px) {
+            opacity: 0;
+          }
+        }
+      }
+      .next {
+        @media screen and (max-width: 1032px) {
+          left: 56%;
+        }
+      }
+      .prev {
+        @media screen and (max-width: 644px) {
+          left: calc(36% - 4px);
+        }
       }
 
     }
@@ -584,32 +657,6 @@
   }
 }
 
-.swiper-pagination-bullet-active-main {
-  position: relative;
-
-}
-
-
-.swiper-slide-active {
-  .item-bottom-elements {
-    .bottom-element-action {
-      button {
-      }
-    }
-  }
-}
-
-.swiper-slide-next, .swiper-slide-prev {
-  .item-bottom-elements {
-    .bottom-element-action {
-      button {
-      }
-    }
-  }
-}
-
-.swiper-slide-active img {
-}
 
 .description-text-style() {
   @media screen and (max-width: 853px) {
